@@ -1,0 +1,16 @@
+{
+    "name": "Verifeyed Prototype",
+    "version": "1.0",
+    "description": "Fact checking extension for Firefox",
+    "manifest_version": 2,
+    "author": "Verifeyed Team",
+    "browser_action":{
+        "default_popup": "index.html",
+        "default_title": "Verifeyed",
+        "default_icon" : "icons/eye_96.png"
+    },
+    "permissions": ["tabs"],
+    "background": {
+        "scripts": ["script.js"]}
+    
+}
