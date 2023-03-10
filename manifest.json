@@ -9,7 +9,7 @@
         "default_title": "Verifeyed",
         "default_icon" : "icons/eye_96.png"
     },
-    "permissions": ["tabs"],
+    "permissions": ["tabs","contextMenus"],
     "background": {
         "scripts": ["script.js"]}
     
