@@ -9,6 +9,6 @@
         "default_title": "Verifeyed",
         "default_icon" : "icons/eye_96.png"
     },
-    "permissions": ["tabs","contextMenus", "menus"],
+    "permissions": ["tabs","contextMenus", "menus", "activeTab"],
     "background": {"scripts": ["script.js"]}
 }
