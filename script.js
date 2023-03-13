@@ -1,6 +1,4 @@
 
-// import {createClient} from 'gptzero-js';
-
 // Funciton to randomly generate a number based on a scale
 function generateNumber(scale) {
   return Math.floor(Math.random() * scale);
@@ -14,16 +12,6 @@ function changeColor(id, val, limit) {
 }
 //changeColor("facts", fact_no, limit); // That's how the function would be triggered; for some reason, the function doesn't work, i.e., the color is not changed (but no error is thrown)
 
-
-// Add "Investigate" to the context menu
-browser.menus.create(
-  {
-    id: "log-selection",
-    title: "Investigate",
-    contexts: ["selection","browser_action"],
-    command: "_execute_browser_action",
-    //icon:  "icons/eye_96.png"
-  });
 
 // Function to run when the extension icon is clicked
 async function fetchData() {
@@ -78,29 +66,21 @@ async function fetchData() {
     
 }
 
+// Add "Investigate" to the context menu
+browser.menus.create(
+  {
+    id: "log-selection",
+    title: "Investigate",
+    contexts: ["selection","browser_action"],
+  });
+
+
+// Open the default browser action popup when the context menu is clicked (FINALLY WORKING)
+browser.menus.onClicked.addListener( () => {
+  browser.browserAction.openPopup();
+});
+
+
 // Function that triggers fetchData() when the extension icon is clicked
 browser.browserAction.onClicked.addListener(fetchData());
 
-
-///////////////////////////////////////
-// NOT NEEDED, BUT KEEPING FOR LATER
-///////////////////////////////////////
-
-function handleContextMenuClick(info, tab) {
-  // Trigger the browser action click event on the tab
-  browser.tabs.sendMessage(tab.id, {action: "click_browser_action"});
-}
-
-//changeColor(colorThreshold);
-
-//browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
-//  if (request.action === "click_browser_action") {
-//    browser.browserAction.onClicked.dispatch(sender.tab);
-//  }
-//});
-
-
-
-
-
-//export {}

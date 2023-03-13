@@ -4,6 +4,10 @@
     "description": "Fact checking extension for Firefox",
     "manifest_version": 2,
     "author": "Verifeyed Team",
+    "icons": {
+        "48": "icons/eye_96.png",
+        "96": "icons/eye_96.png"
+    },
     "browser_action":{
         "default_popup": "index.html",
         "default_title": "Verifeyed",
