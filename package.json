@@ -1,0 +1,19 @@
+{
+  "name": "verifeyed",
+  "version": "1.0.0",
+  "description": "Entrepreneurship Course Vrije Universiteit Amsterdam",
+  "main": "script.cjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Max Emanuel Feucht",
+  "license": "ISC",
+  "type": "module",
+  "exports": {
+    ".": "./dist/node/axios.cjs"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0"
+  }
+}
