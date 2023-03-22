@@ -1,6 +1,6 @@
 ## Entrepreneurship Course Vrije Universiteit Amsterdam
 
-![Verifeyed Prototype Logo](./images/Verifeyed_prototype.png)
+![Verifeyed Prototype Logo](./images/Verifeyed_prototype_2.png)
 
 ### Functionality
 
