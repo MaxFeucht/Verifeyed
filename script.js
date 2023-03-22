@@ -54,7 +54,7 @@ function global_callback(api_type, json){
       const data_ai = json
       const fake_prob = Math.round(data_ai.data.output.probability_fake * 100 * 100) / 100;
       document.getElementById("ai-generated").innerHTML = (fake_prob < 0.01) ? "<0.01%" : fake_prob + "%";
-      if (fake_prob > 0.2) {
+      if (fake_prob > 20) {
         document.getElementById("ai-generated").style.color = "red";
         }; 
     break;
@@ -74,7 +74,7 @@ function global_callback(api_type, json){
 
 
 const AIDetection = async () => {
-  const selectionText = "In Xi Jinping’s closing speech at China’s annual parliamentary meeting on Monday, his message was clear: China is back. Speaking to nearly 3,000 delegates in the Great Hall of the People in Beijing, Xi, newly anointed as president for a precedent-busting third term, said: “After a century of struggle, our national humiliation has been erased … the Chinese nation’s great revival is on an irreversible path. The speech comes as Xi is trying to position himself as a global statesman, leading a China that is ready to dominate the world stage. After three years of isolation caused by the zero-Covid policy, Chinese diplomats and Xi himself are jetting across borders to participate in international summits once again."; //window.getSelection().toString();
+  const selectionText = "Whatever the talk of a “no-limits” friendship, it’s the business deals that count. On the second day of Chinese President Xi Jinping’s visit to Russia, the two countries agreed to a set of proposals that would expand their natural gas trade as well as other economic ties. The proposed deals represent something of a lifeline for Russian President Vladimir Putin, isolated from the West because of sanctions imposed on Russia after his decision to wage a full-blown war across the border in Ukraine. At the center of discussions in Moscow is a new planned pipeline, dubbed Power of Siberia 2, that could supply China with about 50 billion cubic meters of Russian gas annually. “The pipeline, which would pass through Mongolia, has been under discussion for years. But the project took on greater urgency for Russia after its natural gas trade with Europe stopped last year because of its invasion of Ukraine,” my colleagues reported. “By 2030, Putin said, Russia will supply China with at least 98 billion cubic meters, in addition to 100 million tons of liquefied natural gas, through the new pipeline.”"; //window.getSelection().toString();
   if (selectionText == "") {
     const data = 0;
     return data;
@@ -177,7 +177,7 @@ async function fetchData() {
     if (getSelectedText() == "") {
       document.getElementById("content").innerHTML = selection();
     } else {
-      document.getElementById("content").innerHTML = tabs[0].title;//"\"" + tabs[0].title + "\"";//"Verifeyed";
+      document.getElementById("content").innerHTML = "Whatever the talk of a “no-limits” friendship, it’s the business deals that count. On the second day of Chinese President Xi Jinping’s visit to Russia ..."//tabs[0].title;//"\"" + tabs[0].title + "\"";//"Verifeyed";
     };
 
     ////// API calls
@@ -186,8 +186,8 @@ async function fetchData() {
     var threshold = 0.5;
 
     // Retrieve API data (or default values)
-    //AIDetection();
-    AIDetection_default(threshold);
+    AIDetection();
+    //AIDetection_default(threshold);
      //FactCheck();
     FactCheck_default(threshold);
      //Trustworthy();
