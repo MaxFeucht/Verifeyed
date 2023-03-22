@@ -1,6 +1,6 @@
 ## Entrepreneurship Course Vrije Universiteit Amsterdam
 
-![Verifeyed Prototype Logo](./pictures/Verifeyed_prototype.png)
+![Verifeyed Prototype Logo](./images/Verifeyed_prototype.png)
 
 ### Functionality
 
@@ -14,7 +14,8 @@ For Website Trustworthiness, we plan on using a Site Trustworthiness API. Based 
 - For Fact-Checking investigated content, we aim to leverage multiple analysis steps, partly based on existing APIs, and partly based on Natural Language Processing techniques (for a schematic explanation of how we aim to tackle this problem, see Slide 64 (“Fact Checking Scheme”). 
 
 
-### Vision 
+### Feedback-based Improvements 
+
 
 Based on our own vision for Verifeyed, as well as based on  the feedback from our Customers, we aim to add certain functionalities and informations to the tool 
 
@@ -25,6 +26,10 @@ Based on the feedback from our Customer Interviews, we aim to make the scores on
 - For AI Generation detection: Display the parameters that make up the detection of AI-generated text, along with an explanation for users on how these score can be interpreted: 
     - Text “Perplexity” - which represents the amount of randomness in a text
     - Text “Burstiness” - which represents the amount of “order” within that randomness
+
+
+### Vision 
+
 
 In the future, we furthermore want to expand Verifeyed to other Media Formats as well: 
 - To check if images online are outdated, show signs of manipulation, or if they are AI-generated
